@@ -22,6 +22,28 @@ public class BallPanel extends JPanel{
             olivia[i] = new Ball((int)(Math.random()*100),(int)(Math.random()*100),(int)(Math.random()*100));
         }
         setFocusable(true);
+
+        addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                int y = e.getKeyCode();
+                System.out.println(y);
+                if (y == 0){
+                    ballOne.moveUp();
+
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -35,8 +57,8 @@ public class BallPanel extends JPanel{
                 if (x == 39){
                     ballOne.moveRight();
                 }
-
             }
+
 
             @Override
             public void keyReleased(KeyEvent e) {

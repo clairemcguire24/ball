@@ -45,6 +45,7 @@ public class Ball{
         y+=ySpeed;
         if (y>=bPanel.getHeight()-size || y<=0){
             ySpeed*=-1;
+
         }
 
 
@@ -55,5 +56,8 @@ public class Ball{
         x+=xSpeed;
     }
 
+    public void moveUp(){
+        y+=ySpeed;
+    }
 
 }
