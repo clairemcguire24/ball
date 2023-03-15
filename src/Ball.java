@@ -18,6 +18,12 @@ public class Ball{
         c = new Color ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 
     }
+  public void setX(int x){
+    this.x=x;
+  }
+  public void setY(int y){
+    this.y=y;
+  }
 
     public int getX (){
         return x;
@@ -45,7 +51,6 @@ public class Ball{
         y+=ySpeed;
         if (y>=bPanel.getHeight()-size || y<=0){
             ySpeed*=-1;
-
         }
 
 
@@ -55,9 +60,14 @@ public class Ball{
     public void moveRight(){
         x+=xSpeed;
     }
-
-    public void moveUp(){
-        y+=ySpeed;
-    }
+public void moveLeft(){
+  x-=xSpeed;
+}
+public void moveUp(){
+  y-=ySpeed;
+}
+  public void moveDown(){
+    y+=ySpeed;
+  }
 
 }
